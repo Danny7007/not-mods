@@ -423,7 +423,6 @@ public class JCFScript : MonoBehaviour
         yield return null;
         while (!answerStates.Any(st => st.validUpStates.Contains(up[1,usedScanner]) && st.finalScannerPos == shifts[usedScanner]))
             yield return "trycancel";
-        yield return new WaitForSeconds(0.1f);
         buttons[usedScanner].OnInteract();
     }
 }
